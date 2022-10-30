@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Prueba Proyecto 3</title>
+</head>
+<body>
+
+     
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#" class="logo">
+                    <img src="#" alt="">
+                    <span class="nav-item">Dashboard Covid</span>
+                </a></li>
+                <li><a href="#">
+                   <i class="fas fa-home"></i>
+                   <span class="nav-item">Escritorio</span>
+                </a></li>
+                <li><a href="">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-item">Usuarios</span>
+                </a></li>
+                <li><a href="">
+                    <i class="fas fa-chart-bar"></i>
+                    <span class="nav-item">Análisis</span>
+                </a></li>
+                <li><a href="">
+                    <i class="fas fa-cog"></i>
+                    <span class="nav-item">Configuraciones</span>
+                </a></li>
+                <li><a href="">
+                    <i class="fas fa-question-circle"></i>
+                    <span class="nav-item">Ayuda</span>
+                </a></li>
+                <li><a href="" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Salir</span>
+                </a></li>
+            </ul>
+        </nav>
+
+
+        <section class="main">
+            <div class="main-top">
+                <h1>Data</h1>
+                <i class="fas fa-user-co"></i>
+            </div>
+
+
+            <div class="date-style">
+                <main class="col-4 ">
+                    <form >
+                        <div class= "row-3 ">
+                            <select  id="country"  >
+                                
+                            </select>
+                        
+                            <select id="status">
+                                <option value="confirmed">Confirmado</option>
+                                <option value="deaths">Muertes</option>
+                                <option value="recovered">Recuperados</option>
+                                <option value="active ">  Activos</option>
+                            </select>
+                        <div>
+                            <h3 class="mt-4 ">desde</h3>
+                            <input type="date" class="mt-4" id="date" >
+                            <h3 class="mt-4 px-3">hasta</h3>
+                            <input type="date" class="mt-4" id="finalDate" >
+                        </div>   
+                        <div>
+                            <button id="boton" type="button" >Buscar</button>
+                        </div> 
+                        </div>
+                    </form>
+                </main>
+            </div>    
+            <div class="main-data">
+                <div class="card">
+                    <i class="fas fa-chart-line"></i>
+                    <canvas id="covid" width="400" height="400"></canvas>
+                </div>
+                <div class="card">
+                    <i class="fas fa-chart-bar"></i>
+                    <canvas id="covid2" width="400" height="400"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="app.js" type="module"></script>
+        <script src="app2.js" type="module"></script>
+        <script src="api.js" type="module"></script>
+
+    </div>
+</body>
+</html>
